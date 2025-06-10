@@ -10,14 +10,13 @@
 <body>
   <main class="container">
     <h1>成绩查询</h1>
-    <p>输入 <strong>idToken</strong> 与 <strong>SERVERNAME</strong> 后点击“获取成绩”。请注意，idToken 含有敏感信息，仅在可信环境使用。</p>
+    <p>输入 <strong>idToken</strong> 后点击“获取成绩”。页面将自动使用 <code>c4</code> 服务器。请注意，idToken 含有敏感信息，仅在可信环境使用。</p>
+
+    <button id="download-btn" hidden>下载完整成绩数据 (JSON)</button>
 
     <form id="grade-form">
       <label for="idToken">idToken</label>
       <input type="text" id="idToken" placeholder="请输入您的 idToken" required>
-
-      <label for="serverName">SERVERNAME</label>
-      <input type="text" id="serverName" placeholder="如 c4 或 c8" required>
 
       <button type="submit" id="fetch-btn">获取成绩</button>
     </form>
@@ -36,7 +35,6 @@
       <tbody></tbody>
     </table>
 
-    <button id="download-btn" hidden>下载完整成绩数据 (JSON)</button>
   </main>
 
   <script src="script.js"></script>
