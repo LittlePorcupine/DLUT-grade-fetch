@@ -1,0 +1,9 @@
+{
+  "name": "dlut-grade-checker",
+  "version": "1.0.0",
+  "description": "Vercel web app to fetch DLUT grades via idToken",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  }
+}
