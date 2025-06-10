@@ -1,16 +1,30 @@
 :root {
   --primary: #DA7756;
   --background: #EEECE2;
+  --neutral-light: #FBF6F2; /* Lightest for card backgrounds, etc. */
+  --neutral-medium: #E6DACE; /* For text, borders */
+  --neutral-dark: #D4A37F;  /* For hover or subtle accents */
+  --text-dark: #4A4039; /* A darker warm gray, adjust if needed */
 }
 
 body {
   background-color: var(--background);
+  color: var(--text-dark);
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   padding: 2rem 0;
+  line-height: 1.6;
 }
 
-h1, h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+h1, h2, label {
+  font-family: 'Styrene A', 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
   margin-bottom: 1rem;
 }
 
@@ -23,6 +37,16 @@ button {
   background-color: var(--primary);
   border-color: var(--primary);
   color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  background-color: var(--neutral-light);
+  border: 1px solid var(--neutral-medium);
+  color: var(--text-dark);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
 }
 
 td {
@@ -32,13 +56,47 @@ td {
 .container {
   max-width: 600px;
   margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 #grades-table {
   margin-top: 1rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#grades-table th,
+#grades-table td {
+  border: 1px solid var(--neutral-medium);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+#grades-table th {
+  background-color: var(--neutral-light);
+  color: var(--text-dark);
+  font-family: 'Styrene A', 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 #status {
   margin-top: 1rem;
   color: var(--primary);
+  padding: 0.5rem;
+  background-color: var(--neutral-light);
+  border: 1px solid var(--neutral-medium);
+  border-radius: 4px;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+#grade-form {
+  margin-bottom: 2rem;
+}
+
+#download-btn {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
