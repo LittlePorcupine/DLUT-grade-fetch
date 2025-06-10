@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLUT 成绩查询工具</title>
+  <link rel="stylesheet" href="https://unpkg.com/picocss@1.5.9/dist/pico.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>成绩查询</h1>
+    <p>输入 <strong>idToken</strong> 与 <strong>SERVERNAME</strong> 后点击“获取成绩”。请注意，idToken 含有敏感信息，仅在可信环境使用。</p>
+
+    <form id="grade-form">
+      <label for="idToken">idToken</label>
+      <input type="text" id="idToken" placeholder="请输入您的 idToken" required>
+
+      <label for="serverName">SERVERNAME</label>
+      <input type="text" id="serverName" placeholder="如 c4 或 c8" required>
+
+      <button type="submit" id="fetch-btn">获取成绩</button>
+    </form>
+
+    <div id="status" role="alert"></div>
+
+    <table id="grades-table" hidden>
+      <thead>
+        <tr>
+          <th>课程名称</th>
+          <th>平时成绩</th>
+          <th>期末成绩</th>
+          <th>最终成绩</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="download-btn" hidden>下载完整成绩数据 (JSON)</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
