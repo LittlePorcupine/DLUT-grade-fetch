@@ -40,7 +40,7 @@ function renderTable(data) {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const idToken = document.getElementById('idToken').value.trim();
-  const serverName = document.getElementById('serverName').value.trim();
+  const serverName = 'c4';
 
   statusEl.textContent = '正在获取成绩...';
   table.hidden = true;
