@@ -1,3 +1,5 @@
+#注意：该项目已失效，响应中不再返回平时成绩
+
 # DLUT Grade Checker
 
 这是一个可部署到 Vercel 的成绩查询工具。用户输入 `idToken` 后，页面会通过 Vercel Serverless Function 代理请求教务系统接口并展示课程成绩，内部固定使用 `c4` 服务器。
